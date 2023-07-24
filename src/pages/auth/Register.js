@@ -40,8 +40,6 @@ const Register = () => {
 
   return (
     <>
-      <ToastContainer />
-
       {isLoading ? <Loader /> : null}
 
       <section className={`container ${styles.auth}`}>
