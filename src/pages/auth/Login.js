@@ -6,7 +6,7 @@ import { FaGoogle } from "react-icons/fa";
 import Card from "../../components/card/Card";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/config";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { Loader } from "../../components";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
@@ -24,7 +24,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
+        // const user = userCredential.user;
         setIsLoading(false);
         toast.success("Logged in successfully");
         navigate("/");
@@ -43,10 +43,10 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
         // The signed-in user info.
-        const user = result.user;
+        // const user = result.user;
         setIsLoading(false);
         toast.success("Logged in successful");
         navigate("/");
@@ -64,7 +64,7 @@ const Login = () => {
       <section className={`container ${styles.auth}`}>
         {/* Image container */}
         <div className={styles.img}>
-          <img src={loginImg} alt="Login Image" width="400px" />
+          <img src={loginImg} alt="Login images" width="400px" />
         </div>
 
         {/* Form Container */}
