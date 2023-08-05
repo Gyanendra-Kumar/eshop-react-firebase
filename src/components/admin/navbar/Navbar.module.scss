@@ -1,0 +1,46 @@
+.navbar {
+  border-right: 1px solid #ccc;
+  min-height: 83vh;
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--light-blue);
+
+    h4 {
+      color: #fff;
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    li {
+      border-bottom: 1px solid #ccc;
+      padding: 1rem;
+      position: relative;
+      //   text-align: center;
+
+      a {
+        display: block;
+        margin-left: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}
+.active {
+  cursor: pointer;
+  color: orangered;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: orangered;
+}
